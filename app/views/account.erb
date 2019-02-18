@@ -7,11 +7,18 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
+<<<<<<< HEAD
     <% if Helpers.is_logged_in?(session) %>
       <% @user= Helpers.current_user(session) %>
     <h1>Welcome <%= @user.username %></h1>
     <h3>Your Balance: <%= @user.balance %></h3>
     <a href="/logout"> Log Out </a>
+=======
+    <% @user = Helper.is_logged_in?(session) %>
+    <% if @user %>
+    <h1> Welcome <%= @user.username %> </h1>
+    <h1> Current Balance: <% @user.balance %> </h1>
+>>>>>>> ccf91d547ce18e4953bbb530633f33b374c5d3b1
 
     <% else %>
       <h1>You Must <a href="/">Log In</a> to View Your Balance</h1>
